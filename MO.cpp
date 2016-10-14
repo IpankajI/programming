@@ -1,6 +1,6 @@
 //#include<bits/stdc++.h>
 #include<cstdio>
-#include<algorithm>
+#include<algorithm>				//problem link-http://codeforces.com/contest/86/problem/D
 #include<cmath>
 using namespace std;
 const int N=1000005;
@@ -16,7 +16,7 @@ bool cmp(Q x,Q y){
 	}
 	else return p<q;
 }
-void execute(int l,int r,int index){
+void execute(int l,int r,int index){			//actual MO algorithm
 	while(curL<l) {
 		ans+=arr[curL]*(1-(K[arr[curL]]<<1));
 		K[arr[curL++]]--;
@@ -51,7 +51,7 @@ int main(){
 		x.r=v;
 		qu[i]=x;
 	}
-	sort(&qu[1],qu+(t+1),cmp);
+	sort(&qu[1],qu+(t+1),cmp);				//sorting according to block size sq
 	for(int i=1;i<=t;i++) execute(qu[i].l,qu[i].r,qu[i].in);
 	for(int i=1;i<=t;i++) printf("%I64d\n",R[i]);
 }
