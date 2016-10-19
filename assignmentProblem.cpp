@@ -30,7 +30,7 @@ int solve(int n){
 	return dp[(1<<n)-1];
 }
 int main(){
-	freopen("in.txt","r",stdin);
+	//freopen("in.txt","r",stdin);
 	int n;
 	printf("enter dimension of cost matrix\n");
 	scanf("%d",&n);
