@@ -2,9 +2,6 @@
 #define cpx complex<double>
 #define pi 3.14159265359
 using namespace std;
-const int N=105;
-bool dp[N][N];
-char a[N],b[N];
 vector<cpx> FFT(vector<int> vc){
 	int n=vc.size();
 	if(n==1){
@@ -86,4 +83,3 @@ int main() {
 		cout<<round(real(fft[i]))/tmp<<"  "; // coefficients of polynomial which is product of
 	}										 // two polunomials 
 }
-
