@@ -69,7 +69,7 @@ int main() {
 	for(int i=n;i<tmp;i++) coef1.push_back(0);
 	tmp<<=1;
 	for(int i=tmp>>1;i<tmp;i++) coef1.push_back(0);
-	for(int i=m;i--;) {			// enter m+1 coefficients as c1+c1*x+c1*x*x+....
+	for(int i=m;i--;) {			// enter m+1 coefficients as c0+c1*x+c2*x*x+....
 		scanf("%d",&tmp);
 		coef2.push_back(tmp);
 	}
