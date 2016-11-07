@@ -54,7 +54,7 @@ vector<cpx> comMul(vector<cpx> c1,vector<cpx> c2){
 	return res;
 }
 int main() {
-	vector<cpx> fft,ifft;
+	vector<cpx> coef;
 	vector<int> coef1,coef2;
 	int n,m,tmp;
 	scanf("%d %d",&n,&m);		// n and m degree of two polynomials
@@ -78,8 +78,8 @@ int main() {
 	for(int i=m;i<tmp;i++) coef2.push_back(0);
 	tmp<<=1;
 	for(int i=tmp>>1;i<tmp;i++) coef2.push_back(0);
-	fft=iFFT(comMul(FFT(coef1),FFT(coef2)));
+	coef=iFFT(comMul(FFT(coef1),FFT(coef2)));
 	for(int i=0;i<(n+m-1);i++){
-		cout<<round(real(fft[i]))/tmp<<"  "; // coefficients of polynomial which is product of
+		cout<<round(real(coef[i]))/tmp<<"  "; // coefficients of polynomial which is product of
 	}										 // two polunomials 
 }
