@@ -52,3 +52,4 @@ int main(){
 		printf("%lld\n",dp2[mx-1]);
 	}
 } 
+//problem link https://www.codechef.com/problems/FFCOMB
