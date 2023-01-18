@@ -1,4 +1,9 @@
-        static class Reader
+    
+import java.util.*;
+import java.io.DataInputStream;
+import java.io.FileInputStream;
+import java.io.IOException;
+class Reader
     {
         final private int BUFFER_SIZE = 1 << 16;
         private DataInputStream din;
